@@ -4,7 +4,7 @@ Sales Rep System
 # Roles 
 
 ## Mathew 
-  - Login/Register Controller and Routes NO PLAN DESIGNS PLEASE with MiddleWares for Admin and Sales Rep
+  - Login/Register Controller and Routes NO PLANE DESIGNS PLEASE with MiddleWares for Admin and Sales Rep
 
 ## Sham 
   - Sale Rep Controller Routes - Design the sales rep pages like navigation bar and the necessary pages

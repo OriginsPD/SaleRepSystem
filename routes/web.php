@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/register', [RegisterController::class, 'getRegister']);
+Route::post('/register', [RegisterController::class, 'setRegister']);
+
+Route::get('/login', [LoginController::class, 'getLogin'])->name('login');
+Route::post('/login', [LoginController::class, 'setLogin']);
+
+// Sales Rep Middleware
+Route::group(['middleware' => 'auth'], function(){
+    //Sales Rep Routes Goes Here
+});
+
+
+// Admin Middleware
+Route::group(['middleware' => 'admin'], function () {
+    //Admin Routes Goes Here
 });
